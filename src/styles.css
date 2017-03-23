@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+.product-image {
+  max-width: 200px;
+}
+
+.product-container {
+  width: 20rem;
+}
+
+.hide-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
+  display: block;
+}
+
+.product-title {
+  min-height: 73px;
+}
+
+.product {
+  padding-bottom: 68px;
+}
+
+@media (min-width: 1200px) {
+  .row {
+    margin-right: -15px;
+    margin-left: 47px;
+  }
+}
