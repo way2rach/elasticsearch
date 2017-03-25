@@ -1,0 +1,32 @@
+<p class="text-center">Filter by Price:
+  <input type="range" min="0" max="300" [value]="sliderValue" (input)="sliderValue = $event.target.value"/>
+  <span class="font-weight-bold">${{ sliderValue  }}</span>
+</p>
+
+<div class="row" *ngIf="item.hits">
+  <div class="col product"
+       *ngFor="let currentItem of (item.hits |  priceFilter:sliderValue |  slice:startPage:endPage)">
+
+    <div class="card text-center product-container">
+      <div class="card-header product-title">
+        {{ currentItem._source.item_name }}
+      </div>
+      <div class="card-block">
+        <img class="card-img-top product-image" src="{{ currentItem._source.image }}" alt="Card image">
+        <p class="card-text trim">{{ currentItem._source.description }}</p>
+        <button class="btn btn-info" (click)="onSelect(currentItem._source.id)">${{ currentItem._source.item_price }}
+        </button>
+      </div>
+      <div class="card-footer">
+        <a (click)="onSelect(currentItem._source.id)" class="product-link card-link">View Product Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination *ngIf="item.hits" [collectionSize]="item.hits.length" [pageSize]="5" [(page)]="page"
+                (pageChange)="pageHasChanged($event)" [directionLinks]="true"></ngb-pagination>
+<hr>
+<pre *ngIf="item.hits">Current page: {{ page || 1 }}</pre>
+
+

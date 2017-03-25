@@ -5,32 +5,7 @@
     </h1>
   </div>
 </div>
-<!--<router-outlet></router-outlet>-->
-
-<div class="row">
-  <div class="col product" *ngFor="let item of item.hits">
-    <div class="card text-center product-container">
-      <div class="card-header product-title">
-        {{ item._source.item_name }}
-      </div>
-      <div class="card-block">
-        <img class="card-img-top product-image" src="{{ item._source.image }}" alt="Card image">
-        <p class="card-text hide-overflow">{{ item._source.description }}</p>
-        <a href="#" class="btn btn-primary">${{ item._source.item_price }}</a>
-        <!--<a routerLink="/details" routerLinkActive="active" class="btn btn-primary">${{ item._source.item_price }}</a>-->
-      </div>
-
-      <!--<p>Filter by Size:-->
-      <!--0-->
-      <!--<input type="range" min="0" max="100"-->
-      <!--[value]="sliderValue"-->
-      <!--(input)="sliderValue = $event.target.value" />-->
-      <!--100 <span>{{ sliderValue }}</span>-->
-      <!--</p>-->
+<router-outlet></router-outlet>
 
 
-    </div>
-  </div>
-
-</div>
 

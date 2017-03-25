@@ -1,17 +1,18 @@
+<div class="row" *ngIf="selectedItem._source">
+  <div class="col-md-12">
+    <div class="card text-center">
+      <div class="card-header product-title">
+        {{ selectedItem._source.item_name }}
+      </div>
+      <div class="card-block">
+        <img class="card-img-top product-image" src="{{selectedItem._source.image }}" alt="Card image">
+        <p class="card-text">{{selectedItem._source.description }}</p>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-link" (click)="gotoItems()">Back to product list</button>
 
-<!--<div class="row">-->
-  <!--<div class="col-md-12" *ngFor="let item of item.hits">-->
-<!--<div class="card text-center">-->
-  <!--<div class="card-header product-title">-->
-    <!--{{ item._source.item_name }}-->
-  <!--</div>-->
-  <!--<div class="card-block">-->
-    <!--<img class="card-img-top product-image" src="{{ item._source.image }}" alt="Card image">-->
-    <!--<p class="card-text">{{ item._source.description }}</p>-->
-  <!--</div>-->
+</div>
 
-<!--</div>-->
-  <!--</div>-->
 
-<!--</div>-->
 

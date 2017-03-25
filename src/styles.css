@@ -7,7 +7,7 @@
   width: 20rem;
 }
 
-.hide-overflow {
+.trim {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -21,6 +21,16 @@
 
 .product {
   padding-bottom: 68px;
+}
+
+.product-link.product-link.product-link {
+  cursor: pointer;
+  color: #0275d8;
+}
+
+.product-link.product-link.product-link:hover {
+  cursor: pointer;
+  color: #0275d8;
 }
 
 @media (min-width: 1200px) {
