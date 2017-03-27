@@ -2,15 +2,13 @@
   "name": "angular2cli",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    
+  "scripts": { 
     "postinstall": "ng build --aot -prod",
-    "start": "node server.js"
-    
-    
+    "start": "node server.js"  
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.0.0-rc.2",
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",
     "@angular/core": "^2.4.0",
@@ -23,7 +21,6 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.7.6",
-    "@angular/cli": "1.0.0-rc.4",
     "express": "^4.15.2"
   
   },
